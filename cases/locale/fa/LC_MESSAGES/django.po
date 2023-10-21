@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-21 12:03+0330\n"
+"POT-Creation-Date: 2023-10-21 12:18+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,59 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\models.py:11
+msgid "title"
+msgstr "پروژه"
+
+#: .\models.py:12
+msgid "maker"
+msgstr "سازنده"
+
+#: .\models.py:13
+msgid "city"
+msgstr "شهر"
+
+#: .\models.py:14
+msgid "region"
+msgstr "منطقه"
+
+#: .\models.py:15
+msgid "capacity"
+msgstr "ظرفیت"
+
+#: .\models.py:16
+msgid "meter"
+msgstr "متراژ انتخابی"
+
+#: .\models.py:17
+msgid "base value"
+msgstr "قیمت پایه"
+
+#: .\models.py:18
+msgid "buy insurance"
+msgstr "ضمانت خرید"
+
+#: .\models.py:19
+msgid "guaranteed gain"
+msgstr "سود تضمینی"
+
+#: .\models.py:20
+msgid "guaranteed gain percent"
+msgstr "درصد سود تضمینی"
+
+#: .\models.py:21
+msgid "end time"
+msgstr "زمان اتمام"
+
+#: .\models.py:22
+msgid "description"
+msgstr "توضیحات پروژه"
+
+#: .\models.py:23
+msgid "status"
+msgstr "وضعیت پروژه"
+
 #: .\templates\cases\home.html:15
-
-
 msgid "Home Ass"
 msgstr "باسن خانه"
