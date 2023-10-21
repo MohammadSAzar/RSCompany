@@ -1,9 +1,9 @@
 from django.urls import path, include
 
-from .views import home_shower
+from .views import CaseListView
 
 
 urlpatterns = [
-    path('', home_shower, name='home'),
+    path('', CaseListView.as_view(), name='case_list'),
 ]
 
