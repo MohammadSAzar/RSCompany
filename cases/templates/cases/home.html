@@ -1,6 +1,7 @@
 {% extends '_base.html' %}
 {% load i18n %}
 {% load farsi_numbers_tags %}
+{% load humanize %}
 
 
 {% block title %}{% trans 'Home' %}{% endblock %}
@@ -10,7 +11,7 @@
         <h2>{% trans 'title' %} {{ case.title|farsi_number }}</h2>
         <p>{% trans 'maker' %}: {{ case.maker }}</p>
         <p>{% trans 'position' %}: {{ case.city }} - {{ case.region }}</p>
-        <p>{% trans 'min of investment' %}: {{ case.base_value|farsi_number }}</p>
+        <p>{% trans 'min of investment' %}: {{ case.base_value|intcomma:False|farsi_number }} {% trans 'tooman' %}</p>
         <p>{% trans 'guaranteed gain percent' %}: {{ case.guaranteed_gain_percent|farsi_number }}</p>
         <p>{% trans 'end of the projct' %}: {{ case.end_time|farsi_number }}</p>
     {% endfor %}

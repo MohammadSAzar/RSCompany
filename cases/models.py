@@ -20,7 +20,7 @@ class Case(models.Model):
     buy_assurance = models.BooleanField(default=False, verbose_name=_('buy insurance'))
     guaranteed_gain = models.BooleanField(default=False, verbose_name=_('guaranteed gain'))
     guaranteed_gain_percent = models.PositiveIntegerField(verbose_name=_('guaranteed gain percent'))
-    end_time = models.PositiveIntegerField(verbose_name=_('end time'))
+    end_time = models.CharField(max_length=200, verbose_name=_('end time'))
     description = models.TextField(max_length=500, verbose_name=_('description'))
     status = models.CharField(max_length=10, choices=STATUS, verbose_name=_('status'))
     slug = models.SlugField(max_length=250, null=True, blank=True, unique=True, allow_unicode=True)
