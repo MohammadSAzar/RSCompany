@@ -8,7 +8,8 @@
 
 {% block content %}
     {% for case in cases %}
-        <h2>{% trans 'title' %} {{ case.title|farsi_number }}</h2>
+        <a href="{{ case.get_absolute_url }}"><img src="{{ case.cover.url }}" alt="" width="300" height="300"></a>
+        <h2><a href="{{ case.get_absolute_url }}" style="text-decoration: none">{% trans 'title' %} {{ case.title|farsi_number }}</a></h2>
         <p>{% trans 'maker' %}: {{ case.maker }}</p>
         <p>{% trans 'position' %}: {{ case.city }} - {{ case.region }}</p>
         <p>{% trans 'min of investment' %}: {{ case.base_value|intcomma:False|farsi_number }} {% trans 'tooman' %}</p>

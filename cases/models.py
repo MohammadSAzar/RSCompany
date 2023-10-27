@@ -23,6 +23,7 @@ class Case(models.Model):
     end_time = models.CharField(max_length=200, verbose_name=_('end time'))
     description = models.TextField(max_length=500, verbose_name=_('description'))
     status = models.CharField(max_length=10, choices=STATUS, verbose_name=_('status'))
+    cover = models.ImageField(upload_to='cases/', blank=True, verbose_name=_('cover'))
     slug = models.SlugField(max_length=250, null=True, blank=True, unique=True, allow_unicode=True)
     datetime_created = models.DateTimeField(auto_now_add=True)
 
@@ -37,7 +38,7 @@ class Case(models.Model):
     def __str__(self):
         return self.title
 
-    # def get_absolute_url(self):
-    #     return reverse('product_detail', args=[self.slug])
+    def get_absolute_url(self):
+        return reverse('case_detail', args=[self.slug])
 
 
