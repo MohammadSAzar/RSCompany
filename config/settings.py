@@ -38,10 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # 'jalali_date',
+    'jalali_date',
 
     'accounts',
     'cases',
+    'jalali',
 ]
 
 MIDDLEWARE = [

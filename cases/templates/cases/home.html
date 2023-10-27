@@ -1,25 +1,17 @@
+{% extends '_base.html' %}
 {% load i18n %}
-<!doctype html>
-<html  class="no-js" lang="">
-<head>
-    <!-- ************************* Meta tags ************************* -->
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Home</title>
+{% load farsi_numbers_tags %}
 
-</head>
 
-<body dir='rtl'>
-    <h1>{% trans 'Home Ass' %}</h1>
+{% block title %}{% trans 'Home' %}{% endblock %}
 
 {% block content %}
+    {% for case in cases %}
+        <h2>{% trans 'title' %} {{ case.title|farsi_number }}</h2>
+        <p>{% trans 'maker' %}: {{ case.maker }}</p>
+        <p>{% trans 'position' %}: {{ case.city }} - {{ case.region }}</p>
+        <p>{% trans 'min of investment' %}: {{ case.base_value|farsi_number }}</p>
+        <p>{% trans 'guaranteed gain percent' %}: {{ case.guaranteed_gain_percent|farsi_number }}</p>
+        <p>{% trans 'end of the projct' %}: {{ case.end_time|farsi_number }}</p>
+    {% endfor %}
 {% endblock %}
-
-</body>
-</html>
-
-
-
-
