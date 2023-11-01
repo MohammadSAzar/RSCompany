@@ -6,9 +6,9 @@ from django.utils.translation import gettext_lazy as _
 
 class Case(models.Model):
     STATUS = [
-        ('a', 'Active'),
-        ('s', 'Soon'),
-        ('e', 'Ended'),
+        ('a', _('Active')),
+        ('s', _('Soon')),
+        ('e', _('Ended')),
     ]
     title = models.CharField(max_length=300, verbose_name=_('title'))
     maker = models.CharField(max_length=100, verbose_name=_('maker'))

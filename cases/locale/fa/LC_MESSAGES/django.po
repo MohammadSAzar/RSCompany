@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-27 16:05+0330\n"
+"POT-Creation-Date: 2023-11-01 19:28+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\models.py:13 .\templates\cases\home.html:11
+#: .\models.py:9
+msgid "Active"
+msgstr "فعال"
+
+#: .\models.py:10
+msgid "Soon"
+msgstr "به زودی ..."
+
+#: .\models.py:11
+msgid "Ended"
+msgstr "خاتمه یافته"
+
+#: .\models.py:13 .\templates\cases\case_detail.html:11
+#: .\templates\cases\home.html:12
 msgid "title"
 msgstr "پروژه"
 
-#: .\models.py:14 .\templates\cases\home.html:12
+#: .\models.py:14 .\templates\cases\case_detail.html:14
+#: .\templates\cases\home.html:13
 msgid "maker"
 msgstr "سازنده"
 
@@ -34,11 +48,11 @@ msgstr "شهر"
 msgid "region"
 msgstr "منطقه"
 
-#: .\models.py:17
+#: .\models.py:17 .\templates\cases\case_detail.html:16
 msgid "capacity"
 msgstr "ظرفیت"
 
-#: .\models.py:18
+#: .\models.py:18 .\templates\cases\case_detail.html:18
 msgid "meter"
 msgstr "متراژ انتخابی"
 
@@ -50,11 +64,12 @@ msgstr "قیمت پایه"
 msgid "buy insurance"
 msgstr "ضمانت خرید"
 
-#: .\models.py:21
+#: .\models.py:21 .\templates\cases\case_detail.html:19
 msgid "guaranteed gain"
 msgstr "سود تضمینی"
 
-#: .\models.py:22 .\templates\cases\home.html:15
+#: .\models.py:22 .\templates\cases\case_detail.html:20
+#: .\templates\cases\home.html:16
 msgid "guaranteed gain percent"
 msgstr "درصد سود تضمینی"
 
@@ -66,26 +81,36 @@ msgstr "زمان اتمام"
 msgid "description"
 msgstr "توضیحات پروژه"
 
-#: .\models.py:25
+#: .\models.py:25 .\templates\cases\case_detail.html:13
 msgid "status"
 msgstr "وضعیت پروژه"
 
-#: .\templates\cases\home.html:7
-msgid "Home"
-msgstr "خانه"
+#: .\models.py:26
+msgid "cover"
+msgstr ""
 
-#: .\templates\cases\home.html:13
+#: .\templates\cases\case_detail.html:15 .\templates\cases\home.html:14
 msgid "position"
 msgstr "موقعیت"
 
-#: .\templates\cases\home.html:14
+#: .\templates\cases\case_detail.html:17 .\templates\cases\home.html:15
 msgid "min of investment"
 msgstr "حداقل سرمایه‌گذاری"
 
-#: .\templates\cases\home.html:14
+#: .\templates\cases\case_detail.html:17 .\templates\cases\home.html:15
 msgid "tooman"
 msgstr "تومان"
 
-#: .\templates\cases\home.html:16
+#: .\templates\cases\case_detail.html:21
+msgid "buy assurance"
+msgstr "تضمین خرید"
+
+#: .\templates\cases\case_detail.html:22 .\templates\cases\home.html:17
 msgid "end of the projct"
 msgstr "تاریخ اتمام پروژه"
+
+#: .\templates\cases\case_detail.html:23
+msgid "total price"
+msgstr "سرمایه‌گذاری نهایی شما"
+
+
