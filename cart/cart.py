@@ -29,19 +29,19 @@ class Cart:
     def save(self):
         self.session.modified = True
 
-    # def __iter__(self):
-    #     case_ids = self.cart.keys()
-    #     cases = Case.objects.filter(id__in=case_ids)
-    #     cart = self.cart.copy()
-    #     for case in cases:
-    #         cart[str(case.id)]['case_obj'] = case
-    #     for item in cart.values():
-    #         item['total_price'] = item['meter'] * item['case_obj'].base_value
-    #         yield item
-
+    def __iter__(self):
+        case_ids = self.cart.keys()
+        cases = Case.objects.filter(id__in=case_ids)
+        cart = self.cart.copy()
+        for case in cases:
+            cart[str(case.id)]['case_obj'] = case
+        for item in cart.values():
+            item['total_price'] = item['meter'] * item['case_obj'].base_value
+            yield item
+    #
     # def __len__(self):
     #     return sum(item['meter'] for item in self.cart.values())
-
+    #
     # def total_value(self):
     #     case_ids = self.cart.keys()
     #     cases = Case.objects.filter(id__in=case_ids)

@@ -22,18 +22,10 @@
     <p>{% trans 'end of the projct' %}: {{ case.end_time|farsi_number }}</p>
     <p>{% trans 'total price' %}: یک قیمتی</p>
 
-{#    <form action="{% url 'cart:cart_add' case.id %}" method="post">#}
-{#        {% csrf_token %}#}
-{#        <div class="product-action d-flex align-items-sm-center align-content-center mb--30">#}
-{#            <div class="quantity-wrapper d-flex justify-content-start">#}
-{#                <div class="quantity">#}
-{#                    {% render_field add_to_cart_form.number class="quantity-input" %}#}
-{#                </div>#}
-{#            </div>#}
-{#            <button type="submit" class="btn btn-small btn-bg-red btn-color-white btn-hover-2" onclick="window.location.href='cart.html'">#}
-{#                اضافه به سبد خرید#}
-{#            </button>#}
-{#        </div>#}
-{#    </form>#}
+    <form action="{% url 'cart_add' case.id %}" method="post">
+        {% csrf_token %}
+        {{ add_to_cart_form.as_p }}
+        <button type="submit" >اضافه به سبد خرید</button>
+    </form>
 
 {% endblock %}

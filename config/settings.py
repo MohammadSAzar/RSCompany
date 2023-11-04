@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
 
     'jalali_date',
+    'widget_tweaks',
 
     'accounts',
     'cases',
