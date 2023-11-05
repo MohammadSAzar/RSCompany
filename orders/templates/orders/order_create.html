@@ -1,0 +1,37 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load farsi_numbers_tags %}
+{% load humanize %}
+{% load math_functions %}
+
+
+{% block title %}سفارش{% endblock %}
+
+{% block content %}
+    {{ form.as_p }}
+
+    <table class="table order-table order-table-2">
+        <thead>
+            <tr>
+                <th>محصول</th>
+                <th>قیمت نهایی</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in cart %}
+                <tr>
+                    <th>{{ item.case_obj.title }}
+                        <strong><span>&#10005;</span>{{ item.number|intcomma:False|farsi_number }}</strong>
+                    </th>
+                    <td>{{ item.product_obj.price|mul_func:item.meter|intcomma:False|farsi_number }} {% trans '$' %}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>مجموع</th>
+                <td>{{ cart.total_value|intcomma:False|farsi_number }}</td>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}

@@ -38,14 +38,14 @@ class Cart:
         for item in cart.values():
             item['total_price'] = item['meter'] * item['case_obj'].base_value
             yield item
-    #
-    # def __len__(self):
-    #     return sum(item['meter'] for item in self.cart.values())
-    #
-    # def total_value(self):
-    #     case_ids = self.cart.keys()
-    #     cases = Case.objects.filter(id__in=case_ids)
-    #     return sum(item['meter'] * item['case_obj'].base_value for item in self.cart.values())
+
+    def __len__(self):
+        return sum(item['meter'] for item in self.cart.values())
+
+    def total_value(self):
+        case_ids = self.cart.keys()
+        cases = Case.objects.filter(id__in=case_ids)
+        return sum(item['meter'] * item['case_obj'].base_value for item in self.cart.values())
 
     def clear(self):
         del self.session['cart']
