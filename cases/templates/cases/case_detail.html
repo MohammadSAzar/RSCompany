@@ -15,7 +15,6 @@
     <p>{% trans 'position' %}: {{ case.city }} - {{ case.region }}</p>
     <p>{% trans 'capacity' %}: {{ case.capacity|intcomma:False|farsi_number }}</p>
     <p>{% trans 'min of investment' %}: {{ case.base_value|intcomma:False|farsi_number }} {% trans 'tooman' %}</p>
-    <p>{% trans 'meter' %}: {{ case.meter }}</p>
     <p>{% trans 'guaranteed gain' %}: {{ case.guaranteed_gain }}</p>
     <p>{% trans 'guaranteed gain percent' %}: {{ case.guaranteed_gain_percent|farsi_number }}</p>
     <p>{% trans 'buy assurance' %}: {{ case.buy_assurance }}</p>

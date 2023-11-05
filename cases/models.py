@@ -15,7 +15,7 @@ class Case(models.Model):
     city = models.CharField(max_length=100, verbose_name=_('city'))
     region = models.CharField(max_length=100, verbose_name=_('region'))
     capacity = models.PositiveIntegerField(blank=True, verbose_name=_('capacity'))
-    meter = models.PositiveIntegerField(default=1, validators=[MaxValueValidator(100)], verbose_name=_('meter'))
+    # meter = models.PositiveIntegerField(validators=[MaxValueValidator(100)], verbose_name=_('meter'))
     base_value = models.PositiveIntegerField(verbose_name=_('base value'))
     buy_assurance = models.BooleanField(default=False, verbose_name=_('buy insurance'))
     guaranteed_gain = models.BooleanField(default=False, verbose_name=_('guaranteed gain'))
