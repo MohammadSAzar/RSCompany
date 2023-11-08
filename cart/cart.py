@@ -1,6 +1,5 @@
 from cases.models import Case
 
-
 class Cart:
     def __init__(self, request):
         self.request = request
@@ -42,14 +41,14 @@ class Cart:
     def __len__(self):
         return sum(item['meter'] for item in self.cart.values())
 
-    def total_value(self):
-        case_ids = self.cart.keys()
-        cases = Case.objects.filter(id__in=case_ids)
-        return sum(item['meter'] * item['case_obj'].base_value for item in self.cart.values())
-
     def clear(self):
         del self.session['cart']
         self.save()
+
+    def total_value(self):
+        # case_ids = self.cart.keys()
+        # cases = Case.objects.filter(id__in=case_ids)
+        return sum(item['meter'] * item['case_obj'].base_value for item in self.cart.values())
 
     def is_empty(self):
         if self.cart:

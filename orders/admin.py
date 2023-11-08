@@ -5,7 +5,7 @@ from .models import Order, OrderItem
 
 class ItemsInOrdersInline(admin.TabularInline):
     model = OrderItem
-    fields = ('order', 'case', 'meter', 'price',)
+    fields = ('order', 'case', 'meter', 'base_value',)
     extra = 1
 
 @admin.register(Order)
@@ -18,6 +18,6 @@ class OrderAdmin(ModelAdminJalaliMixin, admin.ModelAdmin):
 
 @admin.register(OrderItem)
 class OrderItemAdmin(ModelAdminJalaliMixin, admin.ModelAdmin):
-    list_display = ('order', 'case', 'meter', 'price',)
+    list_display = ('order', 'case', 'meter', 'base_value',)
 
 
